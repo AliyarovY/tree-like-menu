@@ -14,7 +14,7 @@
     <ul>
         {% for f_child in item.childs.all %}
         <a href={{f_child.url}}>{{ f_child }}</a>
-        
+
         <ul>
             {% for s_child in f_child.childs.all %}
             <a href={{s_child.url}}>{{ s_child }}</a>
