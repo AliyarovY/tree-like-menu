@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tree-like menu"
+version = "0.1.0"
+description = ""
+authors = ["-- <yaliyarov@mail.ru>"]
+readme = "README.md"
+packages = [{include = "tree_like menu"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

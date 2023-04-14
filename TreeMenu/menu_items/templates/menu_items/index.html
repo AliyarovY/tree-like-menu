@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load menu_item_tag %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+
+{% get_menu request.path as menu_items %}
+{% for item in menu_items %}
+    {{ item }}
+
+    <ul>
+        {% for f_child in item.childs.all %}
+        <a href={{f_child.url}}>{{ f_child }}</a>
+        
+        <ul>
+            {% for s_child in f_child.childs.all %}
+            <a href={{s_child.url}}>{{ s_child }}</a>
+            {% endfor %}
+        </ul>
+
+        {% endfor %}
+    </ul>
+
+{% endfor %}
+</body>
+</html>
